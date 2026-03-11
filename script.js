@@ -85,3 +85,17 @@ return t !== task
 localStorage.setItem("tasks", JSON.stringify(tasks))
 
 }
+
+function updateTaskStats(){
+
+const tasks = document.querySelectorAll("#taskList li")
+const completed = document.querySelectorAll(".completed")
+
+document.getElementById("totalTasks").textContent = tasks.length
+document.getElementById("completedTasks").textContent = completed.length
+
+}
+
+
+
+
