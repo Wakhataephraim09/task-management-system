@@ -12,11 +12,11 @@ if(taskText === "") return
 
 addTaskToPage(taskText)
 saveTask(taskText)
+updateTaskStats()
 
 input.value = ""
 
 })
-
 
 function addTaskToPage(taskText){
 
@@ -36,6 +36,8 @@ span.classList.add("completed")
 span.classList.remove("completed")
 }
 
+updateTaskStats()
+
 }
 
 const deleteBtn = document.createElement("button")
@@ -44,6 +46,7 @@ deleteBtn.textContent = "Delete"
 deleteBtn.onclick = function(){
 li.remove()
 removeTask(taskText)
+updateTaskStats()
 }
 
 li.appendChild(checkbox)
@@ -72,6 +75,8 @@ tasks.forEach(function(task){
 addTaskToPage(task)
 })
 
+updateTaskStats()
+
 }
 
 function removeTask(task){
@@ -95,7 +100,3 @@ document.getElementById("totalTasks").textContent = tasks.length
 document.getElementById("completedTasks").textContent = completed.length
 
 }
-
-
-
-
