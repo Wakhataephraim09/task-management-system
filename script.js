@@ -17,10 +17,26 @@ input.value = ""
 
 })
 
+
 function addTaskToPage(taskText){
 
 const li = document.createElement("li")
-li.textContent = taskText
+
+const checkbox = document.createElement("input")
+checkbox.type = "checkbox"
+
+const span = document.createElement("span")
+span.textContent = taskText
+
+checkbox.onchange = function(){
+
+if(checkbox.checked){
+span.classList.add("completed")
+}else{
+span.classList.remove("completed")
+}
+
+}
 
 const deleteBtn = document.createElement("button")
 deleteBtn.textContent = "Delete"
@@ -30,6 +46,8 @@ li.remove()
 removeTask(taskText)
 }
 
+li.appendChild(checkbox)
+li.appendChild(span)
 li.appendChild(deleteBtn)
 
 document.getElementById("taskList").appendChild(li)
