@@ -30,6 +30,7 @@ list-style:none;
 padding:0;
 }
 
+
 li{
 background:white;
 margin:10px auto;
@@ -38,3 +39,14 @@ width:250px;
 display:flex;
 justify-content:space-between;
 }
+
+.completed{
+text-decoration: line-through;
+color: gray;
+}
+
+
+
+
+
+
