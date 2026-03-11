@@ -66,6 +66,7 @@ updateTaskStats()
 
 li.appendChild(checkbox)
 li.appendChild(span)
+li.appendChild(editBtn)
 li.appendChild(deleteBtn)
 
 document.getElementById("taskList").appendChild(li)
