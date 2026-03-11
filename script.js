@@ -40,6 +40,21 @@ updateTaskStats()
 
 }
 
+const editBtn = document.createElement("button")
+editBtn.textContent = "Edit"
+
+editBtn.onclick = function(){
+
+const newTask = prompt("Edit your task:", span.textContent)
+
+if(newTask === null || newTask === "") return
+
+updateTask(taskText, newTask)
+
+span.textContent = newTask
+taskText = newTask
+
+}
 const deleteBtn = document.createElement("button")
 deleteBtn.textContent = "Delete"
 
