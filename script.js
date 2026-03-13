@@ -116,3 +116,24 @@ document.getElementById("totalTasks").textContent = tasks.length
 document.getElementById("completedTasks").textContent = completed.length
 
 }
+
+const clearAllBtn = document.getElementById("clearAllBtn")
+
+clearAllBtn.onclick = function(){
+
+localStorage.removeItem("tasks")
+
+document.getElementById("taskList").innerHTML = ""
+
+updateTaskStats()
+
+  }
+
+
+
+
+
+
+
+
+
